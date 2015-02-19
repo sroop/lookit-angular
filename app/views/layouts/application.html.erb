@@ -2,12 +2,16 @@
 <html>
 <head>
   <title>Lookit</title>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js" %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body ng-app="lookit" ng-controller="MainCtrl">
 
-<%= yield %>
+  <div>
+    {{test}}
+  </div>
 
 </body>
 </html>

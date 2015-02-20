@@ -19,13 +19,6 @@ function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('home');
 }])
 
-.factory('posts', [function(){
-  var o = {
-    posts: []
-  };
-  return o;
-}])
-
 .controller('MainCtrl', [
   '$scope',
   'posts',

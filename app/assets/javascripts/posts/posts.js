@@ -16,6 +16,12 @@ angular.module('lookit')
     });
   };
 
+  o.upvote = function(post) {
+    return $http.put('/posts/' + post.id + '/upvote.json').success(function(data){
+      post.upvotes += 1;
+    });
+  };
+
   return o;
 
 }])

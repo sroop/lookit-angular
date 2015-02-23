@@ -5,6 +5,7 @@ angular.module('lookit')
   function($scope, posts){
     $scope.posts = posts.posts;
     $scope.test = "Hello world!";
+
     $scope.addPost = function(){
       if(!$scope.title || $scope.title == "") { return; }
       posts.create({
@@ -15,8 +16,10 @@ angular.module('lookit')
       $scope.title = "";
       $scope.link = "";
     };
-    $scope.incrementUpvotes = function(post){
-      post.upvotes += 1;
+
+    $scope.incrementUpvotes = function(post) {
+      posts.upvote(post);
     };
+
   }
 ])

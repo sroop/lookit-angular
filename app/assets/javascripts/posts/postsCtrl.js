@@ -2,9 +2,9 @@ angular.module('lookit')
 .controller('PostsCtrl', [
   '$scope',
   'posts',
-  '$stateParams',
-  function($scope, posts, $stateParams){
-    $scope.post = posts.posts[$stateParams.id];
+  'post',
+  function($scope, posts, post){
+    $scope.post = post;
     $scope.addComment = function(){
       $scope.post.comments.push({
         author: 'user',

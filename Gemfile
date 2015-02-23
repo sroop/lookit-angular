@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'angularjs-rails'
+gem 'angular_rails_csrf'
 gem 'angular-rails-templates'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'

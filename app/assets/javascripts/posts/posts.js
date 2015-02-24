@@ -28,6 +28,12 @@ angular.module('lookit')
     });
   };
 
+  o.addComment = function(post, id, comment) {
+    return $http.post('/posts/' + id + '/comments.json', comment).success(function(comment){
+      post.comments.push(comment);
+    });
+  };
+
   return o;
 
 }])

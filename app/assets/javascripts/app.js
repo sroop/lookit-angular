@@ -15,6 +15,7 @@ function($stateProvider, $urlRouterProvider) {
       },
       controller: 'MainCtrl'
     })
+
     .state('posts', {
       url: '/posts/{id}',
       templateUrl: 'posts/_posts.html',

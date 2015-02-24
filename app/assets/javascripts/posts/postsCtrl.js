@@ -16,5 +16,9 @@ angular.module('lookit')
       $scope.body = "";
     };
 
+    $scope.incrementUpvotes = function(comment){
+      posts.upvoteComment(post, comment);
+    }
+
   }
 ])

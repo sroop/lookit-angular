@@ -3,7 +3,8 @@
   <span ng-hide="post.link">{{post.title}}</span>
 </h2>
 
-<div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+<div ng-repeat="comment in post.comments | orderBy: '-upvotes'">
+  <span ng-click="incrementUpvotes(comment)">^</span>
   {{comment.upvotes}}
   {{comment.body}} --- by {{comment.author}}
 </div>

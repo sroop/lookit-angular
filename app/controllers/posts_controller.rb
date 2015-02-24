@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   private
 
   def permitted_params
-    params.require(:post).permit(:link, :title)
+    params.require(:post).permit(:link, :title, :upvotes)
   end
 
 end

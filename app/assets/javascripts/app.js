@@ -1,4 +1,4 @@
-angular.module('lookit', ['ui.router', 'templates'])
+angular.module('lookit', ['ui.router', 'templates', 'Devise'])
 .config([
 '$stateProvider',
 '$urlRouterProvider',

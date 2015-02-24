@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # Assets from Bower
 source 'https://rails-assets.org' do
+  gem 'rails-assets-angular-devise'
   gem 'rails-assets-angular-ui-router'
 end
 

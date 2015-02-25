@@ -5,7 +5,7 @@
 
 <div ng-repeat="comment in post.comments | orderBy: '-upvotes'">
   <span ng-click="incrementUpvotes(comment)">+</span>{{comment.upvotes}}
-  {{comment.body}} -- by {{comment.author}}
+  {{comment.body}} -- by {{comment.user.username}}
 </div>
 
 <form ng-submit="addComment()">

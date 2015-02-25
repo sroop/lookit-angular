@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 
   def create
     post = Post.find(params[:post_id])
-    comment = post.comments.create(permitted_params)
+    comment = post.comments.create(permitted_params.merge(user_id: current_user.id))
     respond_with post, comment
   end
 
